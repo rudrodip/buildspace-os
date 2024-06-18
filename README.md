@@ -24,7 +24,7 @@
 
 ### 1. download
 
-click the green "Code" button and select "Download ZIP". make sure to extract the download in a safe spot!
+download the zip file from the [release](https://github.com/rudrodip/buildspace-os-mod/releases) page. make sure to extract the download in a safe spot!
 ![](.github/assets/step1.png)
 
 ### 2. turn on Developer mode
