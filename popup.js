@@ -1,27 +1,18 @@
-document.getElementById('save-button').addEventListener('click', () => {
-  let imageUrl = document.getElementById('image-url').value;
-  if (!imageUrl) {
-      imageUrl = 'default';
-  }
-  chrome.storage.sync.set({ imageUrl: imageUrl });
-});
+const form = document.getElementById("form")
 
-document.getElementById('save-html').addEventListener('click', () => {
-  let html = document.getElementById('custom-html').value;
-  if (!html) {
-      html = 'default';
-  }
-  chrome.storage.sync.set({ html: html });
-});
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const title = e.target.title.value;
+  const image = e.target.image.value;
+  const html = e.target.html.value;
 
-chrome.storage.sync.get('imageUrl', (data) => {
-  if (data.imageUrl && data.imageUrl !== "default") {
-      document.getElementById('image-url').value = data.imageUrl;
-  }
-});
+  chrome.storage.sync.set({ title, image, html })
+  chrome.runtime.sendMessage({ title, image, html })
+})
 
-chrome.storage.sync.get('html', (data) => {
-  if (data.html && data.html !== "default") {
-      document.getElementById('custom-html').value = data.html;
-  }
-});
+chrome.storage.sync.get(["title", "image", "html"], data => {
+  const { title, image, html } = data;
+  form.title.value = title || "";
+  form.image.value = image || "";
+  form.html.value = html || "";
+})

@@ -16,12 +16,23 @@ function replaceHtml(html) {
   return false;
 }
 
+function setTitle(title) {
+  const titleElement = document.querySelector('title');
+  if (titleElement) {
+    titleElement.textContent = title;
+  }
+}
+
 function init() {
-  chrome.storage.sync.get('imageUrl', (data) => {
-    const imageUrl = data.imageUrl;
-    if (imageUrl == "default") {
-      return;
+  chrome.storage.sync.get('title', (data) => {
+    const title = data.title;
+    if (title && title.trim() !== ''){
+      setTitle(title);
     }
+  });
+
+  chrome.storage.sync.get('image', (data) => {
+    const imageUrl = data.image;
     if (imageUrl && imageUrl.trim() !== '') {
       if (!replaceVideo(imageUrl)) {
         const observer = new MutationObserver((mutations, obs) => {
@@ -36,10 +47,7 @@ function init() {
 
   chrome.storage.sync.get('html', (data) => {
     const html = data.html;
-    if (html == "default") {
-      return;
-    }
-    if (html) {
+    if (html && html.trim() !== ''){
       if (!replaceHtml(html)) {
         const observer = new MutationObserver((mutations, obs) => {
           if (replaceHtml(html)) {
@@ -52,28 +60,11 @@ function init() {
   });
 }
 
-chrome.storage.onChanged.addListener((changes, area) => {
-  if (area === 'sync' && changes.imageUrl?.newValue) {
-    const imageUrl = changes.imageUrl.newValue;
-    if (imageUrl == "default") {
-      location.reload();
-      return;
-    }
-    if (imageUrl && imageUrl.trim() !== '') {
-      replaceVideo(imageUrl);
-    }
-  }
-
-  if (area === 'sync' && changes.html?.newValue) {
-    const html = changes.html.newValue;
-    if (html == "default") {
-      location.reload();
-      return;
-    }
-    if (html) {
-      replaceHtml(html);
-    }
-  }
+chrome.storage.onChanged.addListener(init);
+chrome.runtime.onMessage.addListener((message) => {
+  init();
+  const { image, html } = message;
+  (!image && !html) && location.reload();
 });
 
 window.addEventListener('load', init, false);

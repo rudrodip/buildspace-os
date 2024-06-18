@@ -3,92 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #1a202c;
-      }
-      .container {
-        width: 20rem;
-        margin: 2rem auto;
-        padding: 1rem;
-        background-color: #000000;
-        border-radius: 0.5rem;
-      }
-      .text-center {
-        text-align: center;
-      }
-      .mb-6 {
-        margin-bottom: 1.5rem;
-      }
-      .text-2xl {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #fff;
-      }
-      .form-group {
-        margin-bottom: 1rem;
-      }
-      .form-group label {
-        display: block;
-        margin-bottom: 0.25rem;
-        color: #ffffff;
-      }
-      .form-group input {
-        width: 80%;
-        padding: 0.5rem 1rem;
-        border-radius: 0.375rem;
-        background-color: #343434;
-        color: #fff;
-        border: 1px solid gray;
-        outline: none;
-        transition: border-color 0.3s ease-in-out;
-      }
-      .form-group textarea {
-        width: 80%;
-        height: 250px;
-        padding: 0.5rem 1rem;
-        border-radius: 0.375rem;
-        background-color: #343434;
-        color: #fff;
-        border: 1px solid gray;
-        outline: none;
-        transition: border-color 0.3s ease-in-out;
-      }
-      .btn {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        border-radius: 0.375rem;
-        background-color: #ffffff;
-        color: #030303;
-        text-align: center;
-        text-decoration: none;
-        transition: background-color 0.3s ease-in-out;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
       <div class="text-center mb-6">
         <h2 class="text-2xl">BuildspaceOS <span style="font-family: monospace;">[mod]</span></h2>
       </div>
-      <form class="space-y-4">
-        <div class="form-group">
-          <label for="image-url">Image URL</label>
-          <input id="image-url" placeholder="Enter image URL" type="text" />
+      <form id="form">
+        <div style="margin-bottom: 1rem;" class="form-group">
+          <label for="title">Custom title</label>
+          <input id="title" autocomplete="off" placeholder="Enter title here" type="text" />
         </div>
-        <button id="save-button" type="submit" class="btn">Save</button>
-      </form>
-      <form class="space-y-4" style="margin-top: 1rem;">
-        <div class="form-group">
-          <label for="custom-html">Custom HTML</label>
-          <textarea id="custom-html" placeholder="Enter custom html" type="text"></textarea>
+        <div style="margin-bottom: 1rem;" class="form-group">
+          <label for="image">Background image URL</label>
+          <input id="image" autocomplete="off" placeholder="Enter image URL" type="text" />
         </div>
-        <button id="save-html" type="submit" class="btn">Save</button>
+        <div class="form-group">
+          <label for="html">Custom HTML</label>
+          <textarea id="html" placeholder="Enter custom html" type="text"></textarea>
+        </div>
+        <button id="save" type="submit" class="btn">Save</button>
+        <button onclick="location.reload()" class="btn" style="background-color: black; color: white; border: 1px solid rgb(55, 55, 55); margin-left: 5px;">Refresh</button>
       </form>
     </div>
     <script src="popup.js"></script>
