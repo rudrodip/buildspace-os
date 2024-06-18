@@ -63,8 +63,8 @@ function init() {
 chrome.storage.onChanged.addListener(init);
 chrome.runtime.onMessage.addListener((message) => {
   init();
-  const { image, html } = message;
-  (!image && !html) && location.reload();
+  const { title, image, html } = message;
+  ((!image && !html) || !title) && location.reload();
 });
 
 window.addEventListener('load', init, false);

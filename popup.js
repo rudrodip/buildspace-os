@@ -16,3 +16,7 @@ chrome.storage.sync.get(["title", "image", "html"], data => {
   form.image.value = image || "";
   form.html.value = html || "";
 })
+
+document.getElementById("refresh").addEventListener("click", () => {
+  window.location.reload();
+})
