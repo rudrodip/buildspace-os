@@ -1,33 +1,63 @@
-# buildspace os
+# buildspace os [mod version]
+
+## table of contents
+
+- [buildspace os \[mod version\]](#buildspace-os-mod-version)
+  - [table of contents](#table-of-contents)
+  - [features](#features)
+  - [setup](#setup)
+    - [1. download](#1-download)
+    - [2. turn on Developer mode](#2-turn-on-developer-mode)
+    - [3. add the app to your browser](#3-add-the-app-to-your-browser)
+    - [4. open a new tab](#4-open-a-new-tab)
+    - [5. pin the extension](#5-pin-the-extension)
+    - [6. customize](#6-customize)
+  - [got questions?](#got-questions)
+  
+## features
+
+- customize `buildspace os` title
+- customize `buildspace os` background
+- inject custom html/css into the `buildspace os` page
 
 ## setup
-### you don't need to write any code or know how to code to set this up. It will take 2 mins max — promise
-
-**we even made a 2 min vid for you**
-
-[installing buildspcae os](https://github.com/buildspace/buildspace-os/assets/13204620/c19da4b4-1266-4772-ba4e-0fdd795df9f4)
 
 ### 1. download
-click the green "Code" button and select "Download ZIP". make sure to extract the download in a safe spot!<br>
-![](https://i.imgur.com/TlzzORw.png)
+
+click the green "Code" button and select "Download ZIP". make sure to extract the download in a safe spot!
+![](.github/assets/step1.png)
 
 ### 2. turn on Developer mode
-in your browser head to the "Extensions" section. this can be found in the settings portion of your browser! checkout the screenshot below:<br>
-![](https://i.imgur.com/igEIfnt.png)
 
-once you get there you'll see "Developer mode" in the top right. make sure to toggle that **on** and then you'll see new options (we're gonna be using "Load unpacked")<br>
-![](https://i.imgur.com/l8GLD4b.png)
+in your browser head to the "Extensions" section. this can be found in the settings portion of your browser! checkout the screenshot below:
+![](.github/assets/step2.png)
+
+once you get there you'll see "Developer mode" in the top right. make sure to toggle that **on** and then you'll see new options (we're gonna be using "Load unpacked")
+![](.github/assets/step3.png)
 
 ### 3. add the app to your browser
-you're at the home stretch! press the "Load unpacked" option and then go to the folder where you saved buildspace os. it should look something like this:<br>
-![](https://i.imgur.com/ztCAc8i.png)
 
-once you select it you should see this (nice you did it!)<br>
-![](https://i.imgur.com/VmpDMFq.png)
+you're at the home stretch! press the "Load unpacked" option and then go to the folder where you saved buildspace os. it should look something like this:
+![](.github/assets/step4.png)
+
+once you select it you should see this (nice you did it!)
+![](.github/assets/step5.png)
 
 ### 4. open a new tab
-now you can see this thing in action! Open a new tab and you'll notice that there is a prompt saying that the page was changed by the buildspace os extension. **Make sure to select keep it or it will not work.**<br>
+
+now you can see this thing in action! Open a new tab and you'll notice that there is a prompt saying that the page was changed by the buildspace os extension. **Make sure to select keep it or it will not work.**
 ![](https://i.imgur.com/UtvBBmW.png)
 
+### 5. pin the extension
+
+pin the extension so you can easily access it in the future!
+![](.github/assets/pin.png)
+
+### 6. customize
+
+now you can customize the `buildspace os` page to your liking! you can change the title, background, and inject custom html/css into the page.
+![](.github/assets/ui.png)
+
 ## got questions?
-for any questions please send an email to support@buildspace.so
+
+for any questions please reach out to me on x (formerly twitter) at [@rds_agi](https://x.com/rds_agi)
