@@ -1,5 +1,5 @@
 {
-  "name": "buildspace os",
+  "name": "buildspace os [mod]",
   "description": "buildspace os — your new home for nights and weekends",
   "version": "1.0.0",
   "manifest_version": 3,
@@ -7,11 +7,25 @@
     "48": "assets/48.png",
     "128": "assets/128.png"
   },
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "activeTab", "storage"],
   "background": {
     "service_worker": "background.js"
   },
   "chrome_url_overrides": {
     "newtab": "tab_override.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://buildspace.so/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "assets/48.png"
+    }
   }
 }
