@@ -1,6 +1,6 @@
 # buildspace os [mod version]
 
-[buildspace-os-mod](https://github.com/rudrodip/buildspace-os-mod/assets/77154365/46bf68fb-cedf-41b9-975e-02b2ee6c7032)
+https://github.com/rudrodip/buildspace-os-mod/assets/77154365/1fd7173c-a79e-4113-bab9-2f7a10213bc5
 
 ## table of contents
 
