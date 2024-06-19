@@ -48,7 +48,7 @@ once you select it you should see this (nice you did it!)
 ### 4. open a new tab
 
 now you can see this thing in action! Open a new tab and you'll notice that there is a prompt saying that the page was changed by the buildspace os extension. **Make sure to select keep it or it will not work.**
-![](https://i.imgur.com/UtvBBmW.png)
+![](.github/assets/keep.png)
 
 ### 5. pin the extension
 
