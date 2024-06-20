@@ -31,11 +31,3 @@ document.getElementById("refresh").addEventListener("click", () => {
   window.location.reload();
 })
 
-
-document.addEventListener("DOMContentLoaded", function () {
-    var editor = CodeMirror.fromTextArea(document.getElementById("html"), {
-        mode: "text/html",
-        theme: "monokai",
-        lineNumbers: true
-    });
-});
