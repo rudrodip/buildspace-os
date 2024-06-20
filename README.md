@@ -14,6 +14,7 @@ https://github.com/rudrodip/buildspace-os-mod/assets/77154365/1fd7173c-a79e-4113
     - [4. open a new tab](#4-open-a-new-tab)
     - [5. pin the extension](#5-pin-the-extension)
     - [6. customize](#6-customize)
+  - [development](#development)
   - [got questions?](#got-questions)
   
 ## features
@@ -59,6 +60,22 @@ pin the extension so you can easily access it in the future!
 
 now you can customize the `buildspace os` page to your liking! you can change the title, background, and inject custom html/css into the page.
 ![](.github/assets/ui.png)
+
+## development
+
+```bash
+# fork and clone the repo
+git clone https://github.com/your-username/buildspace-os-mod
+
+# install dependencies
+bun install # or your favorite package manager
+```
+
+build the extension
+
+```bash
+bun run build # or run the build.js file
+```
 
 ## got questions?
 
