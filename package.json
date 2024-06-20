@@ -1,1 +1,8 @@
-{ "dependencies": { "archiver": "^7.0.1" } }
+{
+  "scripts": {
+    "build": "bun run build.js"
+  },
+  "dependencies": {
+    "archiver": "^7.0.1"
+  }
+}
